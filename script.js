@@ -28,8 +28,11 @@ const checkMatchingPairs = () => {
 }
 
 const turnCardsBack = () => {
-    console.log('Hi there');
-    
+    for (let i = 0; i < turnedCards.length; i++) {
+        turnedCards[i].style.transform = 'rotateY(0deg)';
+    }
+    // Whipe the array so it can be reused:
+    turnedCards = [];
 }
 
 // Apply click event listener for all cards:
@@ -45,11 +48,13 @@ for (let i = 0; i < cards.length; i++) {
 
             // If checkMatchingPairs returns true, then the cards are goint to keep facing up.
             checkMatchingPairs();
+            turnedCards = [];
 
-            // If its false, then the cards are going to turn back after 2 seconds:
+            // If its false, then the cards are going to turned back:
             if (checkMatchingPairs() === false) {
+
+                // Wait to seconds until execute so the user can see the cards:
                 setTimeout(() => {
-                    console.log("World!"); 
                     turnCardsBack();
                 }, 2000);
             }
