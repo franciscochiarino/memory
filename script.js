@@ -17,6 +17,7 @@ const cardTurner = (id) => {
 
 const checkMatchingPairs = () => {
     // Store each card's class into variables:
+    console.log(turnedCards);
     let cardClass1 = turnedCards[0].attributes[0].textContent.split(' ')[1];
     let cardClass2 = turnedCards[1].attributes[0].textContent.split(' ')[1];
     // Compare them:
@@ -48,7 +49,6 @@ for (let i = 0; i < cards.length; i++) {
 
             // If checkMatchingPairs returns true, then the cards are goint to keep facing up.
             checkMatchingPairs();
-            turnedCards = [];
 
             // If its false, then the cards are going to turned back:
             if (checkMatchingPairs() === false) {
