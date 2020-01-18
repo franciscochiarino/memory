@@ -22,7 +22,7 @@ const checkMatchingPairs = () => {
     let cardClass2 = turnedCards[1].attributes[0].textContent.split(' ')[1];
     // Compare them:
     if (cardClass1 === cardClass2) {
-        return true;
+        return turnedCards = [];
     } else {
         return false;
     }
@@ -32,8 +32,7 @@ const turnCardsBack = () => {
     for (let i = 0; i < turnedCards.length; i++) {
         turnedCards[i].style.transform = 'rotateY(0deg)';
     }
-    // Whipe the array so it can be reused:
-    turnedCards = [];
+    return turnedCards = [];
 }
 
 // Apply click event listener for all cards:
