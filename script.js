@@ -1,16 +1,19 @@
  // Variables
- flipCardInner = document.getElementById('flip-card-inner');
- // One way to get to the image
- flipCardBack = document.getElementsByClassName('flip-card-back');
+ const cat = document.getElementById('cat');
  degCounter = 0;
 
+ // If both cards have the same class, then that means they have the same image. Here is how you know: <id>.attributes[0].textContent.split(' ')[1]; 
+
  // Make the card turn after click
- const cardTurner = () => {
+ const cardTurner = (id) => {
      degCounter += 180;
-     flipCardInner.style.transform = `rotateY(${degCounter}deg)`;
-     console.log(degCounter);
-     console.log(flipCardBack[0].firstElementChild);
- }
+     id.style.transform = `rotateY(${degCounter}deg)`;
+    //  text = cat.attributes[0].textContent.split(' ')[1];
+    console.log('dick')
+    }
+
 
  // Event listener
- flipCardInner.addEventListener('click', cardTurner);
+ cat.addEventListener('click', function() {
+     cardTurner(cat);
+    });
