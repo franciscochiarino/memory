@@ -12,6 +12,14 @@
 
  /* Layout */
 
+ body {
+  background-color: #4D648D;
+}
+
+header {
+  padding: 1rem 0 2rem;
+}
+
  .flex-container {
    display: flex;
    flex-direction: column;
@@ -30,6 +38,7 @@ h1 {
   font-family: 'Rochester', cursive, sans-serif;
   font-size: 4.5rem;
   font-weight: 300;
+  color: #fff;
 }
  
  /* The flip card container - set the width and height to whatever you want. */
