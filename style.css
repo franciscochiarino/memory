@@ -12,6 +12,12 @@
 
  /* Layout */
 
+ .flex-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
 .grid-container {
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(6, 170px);
