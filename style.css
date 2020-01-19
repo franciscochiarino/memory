@@ -24,6 +24,13 @@
     gap: 5px;
 }
 
+/* Typography */
+
+h1 {
+  font-family: 'Rochester', cursive, sans-serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+}
  
  /* The flip card container - set the width and height to whatever you want. */
  .flip-card {
