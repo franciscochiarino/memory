@@ -55,7 +55,7 @@ for (let i = 0; i < cards.length; i++) {
                 // Wait to seconds until execute so the user can see the cards:
                 setTimeout(() => {
                     turnCardsBack();
-                }, 1800);
+                }, 1600);
             }
         }
         
