@@ -17,13 +17,12 @@ const cardTurner = (id) => {
 
 const checkMatchingPairs = () => {
     // Store each card's class into variables:
-    console.log(turnedCards);
     let cardClass1 = turnedCards[0].attributes[0].textContent.split(' ')[1];
     let cardClass2 = turnedCards[1].attributes[0].textContent.split(' ')[1];
     // Compare them:
     if (cardClass1 === cardClass2) {
         document.getElementById(cardClass1).classList.add('found');
-        console.log(cardClass1);
+        document.getElementById(cardClass2).classList.add('found');
         return turnedCards = [];
     } else {
         return false;
@@ -35,6 +34,11 @@ const turnCardsBack = () => {
         turnedCards[i].style.transform = 'rotateY(0deg)';
     }
     return turnedCards = [];
+}
+
+const checkGameOver = () => {
+    
+    console.log(cards);
 }
 
 // Apply click event listener for all cards:
@@ -50,6 +54,7 @@ for (let i = 0; i < cards.length; i++) {
 
             // If checkMatchingPairs returns true, then the cards are goint to keep facing up.
             checkMatchingPairs();
+            checkGameOver();
 
             // If its false, then the cards are going to turned back:
             if (checkMatchingPairs() === false) {
