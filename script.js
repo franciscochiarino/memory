@@ -22,6 +22,8 @@ const checkMatchingPairs = () => {
     let cardClass2 = turnedCards[1].attributes[0].textContent.split(' ')[1];
     // Compare them:
     if (cardClass1 === cardClass2) {
+        document.getElementById(cardClass1).classList.add('found');
+        console.log(cardClass1);
         return turnedCards = [];
     } else {
         return false;
