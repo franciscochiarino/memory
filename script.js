@@ -45,7 +45,7 @@ const checkGameOver = () => {
     })
 
     if (counter === 9) {
-        console.log('sin')
+        confetti.start();
     }
 
 }
