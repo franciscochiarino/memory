@@ -1,6 +1,6 @@
 // Variables
-// Store the HTML collection in 'cards':
-const cards = document.getElementsByClassName('flip-card-inner');
+// Store the NodeList in 'cards':
+const cards = document.querySelectorAll('.flip-card-inner'); // Here it used to be getElementsByClassName and then I changed it, so if smth doesnt work, change it back.
 // Let the script know which images are being turned (these variables are gonna carry the img's id):
 let turnedCards = [];
 
@@ -37,8 +37,17 @@ const turnCardsBack = () => {
 }
 
 const checkGameOver = () => {
-    
-    console.log(cards);
+
+    let counter = 0;
+
+    cards.forEach(card => {
+        (card.className.includes('found')) ? counter += 1 : counter += 0;
+    })
+
+    if (counter === 9) {
+        console.log('sin')
+    }
+
 }
 
 // Apply click event listener for all cards:
