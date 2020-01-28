@@ -28,8 +28,9 @@ header {
 
 .grid-container {
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(6, 170px);
+    grid-template: repeat(3, 1fr) / repeat(6, 141px);
     gap: 5px;
+    padding: 2rem 0;
 }
 
 /* Typography */
@@ -44,8 +45,8 @@ h1 {
  /* The flip card container - set the width and height to whatever you want. */
  .flip-card {
     background-color: transparent;
-    width: calc(425px/2.5);
-    height: calc(550px/2.5);
+    width: calc(141px);
+    height: calc(183px);
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
